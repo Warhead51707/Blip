@@ -1,0 +1,102 @@
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Blip.exe
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Blip.deps.json
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Blip.runtimeconfig.json
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Blip.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Blip.pdb
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\MonoGame.Framework.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\SharpDX.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\SharpDX.Direct2D1.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\SharpDX.Direct3D11.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\SharpDX.Direct3D9.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\SharpDX.DXGI.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\SharpDX.Mathematics.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\SharpDX.MediaFoundation.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\SharpDX.XAudio2.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\SharpDX.XInput.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\runtimes\debian-x64\native\libuv.so
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\runtimes\fedora-x64\native\libuv.so
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\runtimes\opensuse-x64\native\libuv.so
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\runtimes\osx\native\libuv.dylib
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\runtimes\rhel-x64\native\libuv.so
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\runtimes\win7-arm\native\libuv.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\runtimes\win7-x64\native\libuv.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\runtimes\win7-x86\native\libuv.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\obj\Debug\net6.0-windows\Blip.csproj.AssemblyReference.cache
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\obj\Debug\net6.0-windows\Blip.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\obj\Debug\net6.0-windows\Blip.AssemblyInfoInputs.cache
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\obj\Debug\net6.0-windows\Blip.AssemblyInfo.cs
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\obj\Debug\net6.0-windows\Blip.csproj.CoreCompileInputs.cache
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\obj\Debug\net6.0-windows\Blip.csproj.CopyComplete
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\obj\Debug\net6.0-windows\Blip.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\obj\Debug\net6.0-windows\refint\Blip.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\obj\Debug\net6.0-windows\Blip.pdb
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\obj\Debug\net6.0-windows\Blip.genruntimeconfig.cache
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\obj\Debug\net6.0-windows\ref\Blip.dll
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\character\player\byte.png
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\character\player\byte.png
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Blip.exe
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Blip.deps.json
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Blip.runtimeconfig.json
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Blip.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Blip.pdb
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\MonoGame.Framework.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\SharpDX.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\SharpDX.Direct2D1.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\SharpDX.Direct3D11.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\SharpDX.Direct3D9.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\SharpDX.DXGI.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\SharpDX.Mathematics.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\SharpDX.MediaFoundation.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\SharpDX.XAudio2.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\SharpDX.XInput.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\runtimes\debian-x64\native\libuv.so
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\runtimes\fedora-x64\native\libuv.so
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\runtimes\opensuse-x64\native\libuv.so
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\runtimes\osx\native\libuv.dylib
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\runtimes\rhel-x64\native\libuv.so
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\runtimes\win7-arm\native\libuv.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\runtimes\win7-x64\native\libuv.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\runtimes\win7-x86\native\libuv.dll
+C:\Users\nicki\Documents\Blip\obj\Debug\net6.0-windows\Blip.csproj.AssemblyReference.cache
+C:\Users\nicki\Documents\Blip\obj\Debug\net6.0-windows\Blip.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicki\Documents\Blip\obj\Debug\net6.0-windows\Blip.AssemblyInfoInputs.cache
+C:\Users\nicki\Documents\Blip\obj\Debug\net6.0-windows\Blip.AssemblyInfo.cs
+C:\Users\nicki\Documents\Blip\obj\Debug\net6.0-windows\Blip.csproj.CoreCompileInputs.cache
+C:\Users\nicki\Documents\Blip\obj\Debug\net6.0-windows\Blip.csproj.CopyComplete
+C:\Users\nicki\Documents\Blip\obj\Debug\net6.0-windows\Blip.dll
+C:\Users\nicki\Documents\Blip\obj\Debug\net6.0-windows\refint\Blip.dll
+C:\Users\nicki\Documents\Blip\obj\Debug\net6.0-windows\Blip.pdb
+C:\Users\nicki\Documents\Blip\obj\Debug\net6.0-windows\Blip.genruntimeconfig.cache
+C:\Users\nicki\Documents\Blip\obj\Debug\net6.0-windows\ref\Blip.dll
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\test.png
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\test.png
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\pixel.xnb
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\fonts\pixel.spritefont
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\fonts\pixel.xnb
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\tiles\testTile.png
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\fonts\pixel.spritefont
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\tiles\testTile.png
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\pixel.xnb
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\fonts\pixel.xnb
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\test2.png
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\test2.png
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\fonts\pixel2.xnb
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\character\player\byte.xnb
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\tiles\testTile.xnb
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\test.xnb
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\test2.xnb
+C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\test3.png
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\test3.png
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\fonts\pixel2.xnb
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\character\player\byte.xnb
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\tiles\testTile.xnb
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\test.xnb
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\test2.xnb
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\play_button.png
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\stop_button.png

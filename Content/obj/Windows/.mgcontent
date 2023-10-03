@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/fonts/pixel.spritefont</File>
+    <File>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/fonts/pixel2.spritefont</File>
+    <File>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/sprites/character/player/byte.png</File>
+    <File>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/sprites/tiles/testTile.png</File>
+    <File>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/sprites/ui/test.png</File>
+    <File>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/sprites/ui/test2.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

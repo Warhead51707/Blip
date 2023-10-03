@@ -1,0 +1,6 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/nicki/Documents/Blip/Content/assets/fonts/pixel.spritefont","C:/Users/nicki/Documents/Blip/Content/bin/Windows/Content/assets/fonts/pixel.xnb","FontDescriptionProcessor","SpriteFontContent",2080,13343,0.2595794
+"C:/Users/nicki/Documents/Blip/Content/assets/sprites/character/player/byte.png","C:/Users/nicki/Documents/Blip/Content/bin/Windows/Content/assets/sprites/character/player/byte.xnb","TextureProcessor","Texture2DContent",200,1109,0.0251587
+"C:/Users/nicki/Documents/Blip/Content/assets/sprites/tiles/testTile.png","C:/Users/nicki/Documents/Blip/Content/bin/Windows/Content/assets/sprites/tiles/testTile.xnb","TextureProcessor","Texture2DContent",147,1109,0.0014201
+"C:/Users/nicki/Documents/Blip/Content/assets/sprites/ui/test.png","C:/Users/nicki/Documents/Blip/Content/bin/Windows/Content/assets/sprites/ui/test.xnb","TextureProcessor","Texture2DContent",170,1109,0.0037009
+"C:/Users/nicki/Documents/Blip/Content/assets/sprites/ui/test2.png","C:/Users/nicki/Documents/Blip/Content/bin/Windows/Content/assets/sprites/ui/test2.xnb","TextureProcessor","Texture2DContent",170,1109,0.001257
