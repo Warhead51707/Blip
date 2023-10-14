@@ -45,7 +45,7 @@ public class PreviewTile : Tile
             return;
         }
 
-        sprite.color = Color.Green;
+        if (scene.gameStateManager.camera.IsFocused()) return;
 
         MouseState previousMouseState = currentMouseState;
 
@@ -55,19 +55,32 @@ public class PreviewTile : Tile
 
         position = Vector2.Transform(mousePosition, Matrix.Invert(scene.camera.transformMatrix));
 
+        if (placementTileGrid.GetTileWithWorld(position) != null)
+        {
+            sprite.color = Color.Red;
+        }
+        else
+        {
+            sprite.color = Color.Green;
+        }
+
         previewTileGrid.SetTileWithWorld(this, position);
 
         if (currentMouseState.LeftButton == ButtonState.Pressed && previousMouseState.LeftButton == ButtonState.Released)
         {
-            Vector2 mousePositionInWorld = Vector2.Transform(mousePosition, Matrix.Invert(scene.camera.transformMatrix));
+            placementTileGrid.SetTileWithWorld(new Tile(scene, Vector2.Zero, identifier), position);
+        }
 
-            placementTileGrid.SetTileWithWorld(new Tile(scene, Vector2.Zero, identifier), mousePositionInWorld);
+        if (currentMouseState.RightButton == ButtonState.Pressed && previousMouseState.RightButton == ButtonState.Released)
+        {
+            placementTileGrid.RemoveTileWithWorld(position);
         }
 
     }
 
     public override void Draw(SpriteBatch levelSpriteBatch, float layer = 1f)
     {
+        if (scene.gameStateManager.GetGameState() == Manager.GameState.GameState.Play) return;
         base.Draw(levelSpriteBatch, layer);
     }
 }

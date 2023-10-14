@@ -22,6 +22,7 @@ public class GameStateManager
     {
         this.content = content;
         this.uiManager = uIManager;
+        this.camera = camera;
 
         gameState = GameState.Play;
         this.graphicsDevice = graphicsDevice;

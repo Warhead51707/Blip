@@ -16,5 +16,6 @@ public enum AnchorPoint
     BottomRight,
     BottomMiddle,
     BottomLeft,
+    Mouse,
     None
 }

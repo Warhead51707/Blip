@@ -15,7 +15,7 @@ public class Camera
     private GameStateManager gameStateManager;
 
     //Click and drag movement variables
-    private bool isDragging = false;
+    public bool isDragging = false;
     private Vector2 initialMousePosition;
 
     //Zoom variables
@@ -61,6 +61,11 @@ public class Camera
     public void SetFocus(bool isFocused)
     {
         this.isFocused = isFocused;
+    }
+
+    public bool IsFocused()
+    {
+        return isFocused;
     }
 
     private void Zoom()

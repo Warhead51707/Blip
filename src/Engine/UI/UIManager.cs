@@ -61,7 +61,7 @@ public class UIManager
     {
         foreach (UIElement uiElement in ui)
         {
-            if (!uiElement.visible) continue;
+            //if (!uiElement.visible) continue;
            // Debug.WriteLine(uiElement.identifier);
             uiElement.Update();
         }

@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using System.Diagnostics;
 using System.Web;
 
 namespace Blip.src.Engine.UI;
@@ -36,6 +38,8 @@ public class UIElement
         CalculateAnchorPointPosition();
 
         if (!isChild) position = new Vector2(-uiManager.uiCamera.uiTransformMatrix.Translation.X / uiManager.uiCamera.uiTransformMatrix.M11, -uiManager.uiCamera.uiTransformMatrix.Translation.Y / uiManager.uiCamera.uiTransformMatrix.M22) + activeOffset;
+
+        if (anchorPoint == AnchorPoint.Mouse) position = activeOffset;
     }
 
     public virtual void Draw(SpriteBatch uiSpriteBatch)
@@ -92,6 +96,15 @@ public class UIElement
         if (anchorPoint == AnchorPoint.TopRight)
         {
             activeOffset = new Vector2((uiManager.graphicsAdapter.CurrentDisplayMode.Width / 3) - size.X - offset.X, offset.Y);
+        }
+
+        if (anchorPoint == AnchorPoint.Mouse)
+        {
+            Vector2 currentMousePosition = Mouse.GetState().Position.ToVector2();
+
+            Vector2 mouseWorldPosition = Vector2.Transform(currentMousePosition, Matrix.Invert(uiManager.uiCamera.uiTransformMatrix) * uiManager.uiCamera.uiTransformMatrix.M11);
+
+            activeOffset = new Vector2(mouseWorldPosition.X - offset.X, mouseWorldPosition.Y - offset.Y) / 3;
         }
     }
 }

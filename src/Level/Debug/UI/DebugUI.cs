@@ -12,11 +12,15 @@ public class DebugUI
 {
     private Panel topPanel;
     private Panel testPanel;
+    private Panel tilePanel;
     private Button playButton;
+
+    private bool isTilePlacer = false;
     public DebugUI(UIManager uiManager)
     {
         testPanel = new Panel("Test Panel", uiManager, AnchorPoint.BottomLeft, new Vector2(0, 0), new Vector2(148, (uiManager.graphicsAdapter.CurrentDisplayMode.Height / 3) - 20), "ui/test");
         topPanel = new Panel("Top Panel", uiManager, AnchorPoint.TopRight, new Vector2(0, 0), new Vector2(uiManager.graphicsAdapter.CurrentDisplayMode.Width / 3, 20), "ui/test3");
+        tilePanel = new Panel("Tile Panel", uiManager, AnchorPoint.Mouse, new Vector2(-25, 65), new Vector2(40, 20), "ui/test");
 
         topPanel.AddChild(new UIText("W Engine Text", uiManager, AnchorPoint.None, new Vector2(74, 10), "W ENGINE: 0.0.1", Color.Yellow));
 
@@ -30,18 +34,38 @@ public class DebugUI
 
         testPanel.AddChild(new UIImage("Test Tile Image", uiManager, AnchorPoint.None, new Vector2(30, 40), new Vector2(16, 16), "tiles/testTile"));
 
+        tilePanel.AddChild(new UIText("Grid Pos Text", uiManager, AnchorPoint.None, new Vector2(20,10), "(0,0)", Color.White));
+
+        tilePanel.setChild(true);
+
+        tilePanel.visible = false;
+
         uiManager.AddUIElement(testPanel);
         uiManager.AddUIElement(topPanel);
         uiManager.AddUIElement(playButton);
+        uiManager.AddUIElement(tilePanel);
+    }
+
+    public bool IsTilePlacer()
+    {
+        return isTilePlacer;
+    }
+
+    public void SetTilePlacer(bool isTilePlacer)
+    {
+        this.isTilePlacer = isTilePlacer;
     }
 
     public void HideDebugUI()
     {
         testPanel.visible = false;
+        tilePanel.visible = false;
     }
 
     public void ShowDebugUI()
     {
         testPanel.visible = true;
+
+        if (isTilePlacer) tilePanel.visible = true;
     }
 }

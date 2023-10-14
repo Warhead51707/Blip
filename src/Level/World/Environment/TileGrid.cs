@@ -41,6 +41,36 @@ public class TileGrid
         tile.position.Y = gridPosition.Y * 16;
     }
 
+    public Tile GetTileWithWorld(Vector2 worldPosition)
+    {
+        worldPosition.X = (float)Math.Round(worldPosition.X / 16) * 16;
+        worldPosition.Y = (float)Math.Round(worldPosition.Y / 16) * 16;
+
+        Vector2 gridPosition = WorldPosToGridPos(worldPosition);
+
+        if (tiles.ContainsKey(gridPosition))
+        {
+            return tiles[gridPosition];
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public void RemoveTileWithWorld(Vector2 worldPosition)
+    {
+        worldPosition.X = (float)Math.Round(worldPosition.X / 16) * 16;
+        worldPosition.Y = (float)Math.Round(worldPosition.Y / 16) * 16;
+
+        tiles.Remove(WorldPosToGridPos(worldPosition));
+    }
+
+    public void RemoveTileWithGrid(Vector2 gridPosition)
+    {
+        tiles.Remove(gridPosition);
+    }
+
     public void Update()
     {
         foreach (KeyValuePair<Vector2, Tile> tile in tiles)

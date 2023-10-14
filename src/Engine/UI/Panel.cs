@@ -17,7 +17,7 @@ public class Panel : UIElement
     public NineSlice panelBackground;
 
     public bool isHovering;
-    
+    private bool stoppedHovering;
 
     private float layer;
 
@@ -53,8 +53,10 @@ public class Panel : UIElement
 
         isHovering = mouseWorldPos.X > position.X && mouseWorldPos.X < position.X + size.X && mouseWorldPos.Y > position.Y && mouseWorldPos.Y < position.Y + size.Y;
 
-        uiManager.uiCamera.SetFocus(isHovering);
-        
+        if (!stoppedHovering) uiManager.uiCamera.SetFocus(isHovering);
+
+        stoppedHovering = !isHovering;
+
     }
 
     public override void Draw(SpriteBatch spriteBatch)

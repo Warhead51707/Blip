@@ -47,6 +47,12 @@ public class Debug : World
     private void ChangePreviewTile()
     {
         previewTile.ChangePreviewTile("tiles/testTile");
+
+        Panel tilePanel = gameStateManager.uiManager.GetUIElement<Panel>("Tile Panel");
+
+        tilePanel.visible = !tilePanel.visible;
+
+        debugUI.SetTilePlacer(!debugUI.IsTilePlacer());
     }
 
     private void PlayButton()
@@ -81,6 +87,19 @@ public class Debug : World
             camera.Update();
             previewTile.Update();
             tileGrid.Update();
+
+            currentMouseState = Mouse.GetState();
+
+            Vector2 worldMousePosition = Vector2.Transform(new Vector2(currentMouseState.X, currentMouseState.Y), Matrix.Invert(camera.transformMatrix));
+
+            UIText gridPosText = gameStateManager.uiManager.GetUIElement<Panel>("Tile Panel").GetChild<UIText>("Grid Pos Text");
+
+            worldMousePosition.X = (float)Math.Round(worldMousePosition.X / 16) * 16;
+            worldMousePosition.Y = (float)Math.Round(worldMousePosition.Y / 16) * 16;
+
+            Vector2 gridMousePosition = Vector2.Floor(new Vector2(worldMousePosition.X / 16, worldMousePosition.Y / 16));
+
+            gridPosText.text = "(" + gridMousePosition.X + "," + gridMousePosition.Y + ")";
 
             return;
         }
