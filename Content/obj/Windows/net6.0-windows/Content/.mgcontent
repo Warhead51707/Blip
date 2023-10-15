@@ -4,11 +4,11 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/fonts/pixel.spritefont</File>
-    <File>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/sprites/character/player/byte.png</File>
-    <File>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/sprites/tiles/testTile.png</File>
-    <File>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/sprites/ui/test.png</File>
-    <File>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/sprites/ui/test2.png</File>
+    <File>C:/Users/nicki/Documents/Blip/Content/assets/fonts/pixel.spritefont</File>
+    <File>C:/Users/nicki/Documents/Blip/Content/assets/sprites/character/player/byte.png</File>
+    <File>C:/Users/nicki/Documents/Blip/Content/assets/sprites/tiles/testTile.png</File>
+    <File>C:/Users/nicki/Documents/Blip/Content/assets/sprites/ui/test.png</File>
+    <File>C:/Users/nicki/Documents/Blip/Content/assets/sprites/ui/test2.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

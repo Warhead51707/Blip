@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,15 +25,30 @@ public class DebugUI
 
         topPanel.AddChild(new UIText("W Engine Text", uiManager, AnchorPoint.None, new Vector2(74, 10), "W ENGINE: 0.0.1", Color.Yellow));
 
+        topPanel.AddChild(new UIText("FPS Text", uiManager, AnchorPoint.None, new Vector2((uiManager.graphicsAdapter.CurrentDisplayMode.Width / 3) - 45, 10), "FPS: ", Color.Pink));
+
         playButton = new Button("Play Button", uiManager, AnchorPoint.BottomRight, new Vector2(16, 16), new Vector2(32, 32), "ui/test2", 2f);
 
         playButton.AddChild(new UIImage("Play Button Image", uiManager, AnchorPoint.None, new Vector2(13, 15), new Vector2(32, 32), "ui/play_button"));
 
         testPanel.AddChild(new UIText("Tile Placer Text", uiManager, AnchorPoint.None, new Vector2(74, 12), "Tile Placer", Color.White));
 
-        testPanel.AddChild(new Button("Tile Button", uiManager, AnchorPoint.None, new Vector2(14, 24), new Vector2(32, 32), "ui/test2", 2f));
+        GridLayout testLayout = new GridLayout("Test Layout", uiManager, AnchorPoint.None, new Vector2(8, 24), new Vector2(32, 32), 3, 48f);
 
-        testPanel.AddChild(new UIImage("Test Tile Image", uiManager, AnchorPoint.None, new Vector2(30, 40), new Vector2(16, 16), "tiles/testTile"));
+        string[] tileDirectoryFiles = System.IO.Directory.GetFiles("Content/assets/sprites/tiles");
+
+        for (int i = 0; i < tileDirectoryFiles.Length - 1; i++)
+        {
+            Button tileButton = new Button("Tile Button" + i, uiManager, AnchorPoint.None, new Vector2(0, 0), new Vector2(32, 32), "ui/test2", 2f);
+
+            string fileName = Path.GetFileNameWithoutExtension(tileDirectoryFiles[i + 1]);
+
+            tileButton.AddChild(new UIImage("Test Tile Image" + i, uiManager, AnchorPoint.None, new Vector2(16, 16), new Vector2(16, 16), "tiles/" + fileName));
+
+            testLayout.AddChild(tileButton);
+        }
+
+        testPanel.AddChild(testLayout);
 
         tilePanel.AddChild(new UIText("Grid Pos Text", uiManager, AnchorPoint.None, new Vector2(20,10), "(0,0)", Color.White));
 

@@ -12,8 +12,11 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Content\assets\scenes\world.json" />
     <None Remove="Content\assets\sprites\character\player\byte.png" />
+    <None Remove="Content\assets\sprites\character\player\char1.png" />
     <None Remove="Content\assets\sprites\tiles\testTile.png" />
+    <None Remove="Content\assets\sprites\tiles\testTile2.png" />
     <None Remove="Content\assets\sprites\ui\play_button.png" />
     <None Remove="Content\assets\sprites\ui\stop_button.png" />
     <None Remove="Content\assets\sprites\ui\test.png" />
@@ -22,7 +25,16 @@
     <None Remove="Content\pixel.spritefont" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\scenes\world.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\assets\sprites\character\player\byte.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\assets\sprites\character\player\char1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\assets\sprites\tiles\testTile2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\assets\sprites\ui\play_button.png">

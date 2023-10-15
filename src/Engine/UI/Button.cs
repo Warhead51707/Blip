@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Blip.src.Engine.UI;
 public class Button : Panel
 {
-    public delegate void ClickEventHandler();
+    public delegate void ClickEventHandler(Button self);
 
     public event ClickEventHandler OnClick;
 
@@ -30,7 +30,7 @@ public class Button : Panel
         if (isHovering && currentMouseState.LeftButton == ButtonState.Released && lastMouseState.LeftButton == ButtonState.Pressed)
         {
             clicks++;
-            OnClick?.Invoke();
+            OnClick?.Invoke(this);
         }
         base.Update();
     }

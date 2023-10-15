@@ -21,7 +21,7 @@ public class Panel : UIElement
 
     private float layer;
 
-    private List<UIElement> children = new List<UIElement>();
+    public List<UIElement> children = new List<UIElement>();
 
     private MouseState currentMouseState;
 
@@ -29,6 +29,8 @@ public class Panel : UIElement
     {
         this.size = size;
         this.layer = layer;
+
+        if (backgroundSprite == "none") return;
 
         this.panelBackground = new NineSlice(SpriteHelper.createTextureFromPNG(backgroundSprite, uiManager.graphicsDevice), 2, new Vector4(0, 0, size.X, size.Y));
     }
@@ -40,8 +42,12 @@ public class Panel : UIElement
         currentMouseState = Mouse.GetState();
 
         base.Update();
-        panelBackground.position.X = position.X;
-        panelBackground.position.Y = position.Y;
+
+        if (panelBackground != null)
+        {
+            panelBackground.position.X = position.X;
+            panelBackground.position.Y = position.Y;
+        }
 
         foreach (UIElement child in children)
         {
@@ -61,7 +67,7 @@ public class Panel : UIElement
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        panelBackground.Draw(spriteBatch, layer);
+        if (panelBackground != null) panelBackground.Draw(spriteBatch, layer);
 
         foreach (UIElement child in children)
         {

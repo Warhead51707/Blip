@@ -57,6 +57,7 @@ namespace Blip
 
         protected override void Update(GameTime gameTime)
         {
+            if (!IsActive) return;
             gameStateManager.Update(gameTime);
             uiManager.Update(gameTime);
             base.Update(gameTime);
@@ -64,7 +65,7 @@ namespace Blip
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(Color.Gray);
 
             levelSpriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend, SamplerState.PointWrap, null, null, null, gameCamera.transformMatrix);
 

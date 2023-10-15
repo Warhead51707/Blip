@@ -25,9 +25,11 @@ public class Debug : World
 
     private MouseState currentMouseState;
 
-    private Button tileButton;
-
     private Button playButton;
+
+    private int frameCount;
+    private float elapsedTime;
+    private float fps;
 
     public Debug(GameStateManager gameStateManager, Camera camera) : base(gameStateManager, camera)
     {
@@ -37,25 +39,30 @@ public class Debug : World
 
         previewTile = new PreviewTile(this, Vector2.Zero, "none", tileGrid, previewTileGrid);
 
-        tileButton = gameStateManager.uiManager.GetUIElement<Panel>("Test Panel").GetChild<Button>("Tile Button");
-        playButton = gameStateManager.uiManager.GetUIElement<Button>("Play Button");
+        for (int i = 0; i < gameStateManager.uiManager.GetUIElement<Panel>("Test Panel").GetChild<GridLayout>("Test Layout").children.Count; i++)
+        {
+            Button tileButton = gameStateManager.uiManager.GetUIElement<Panel>("Test Panel").GetChild<GridLayout>("Test Layout").GetChild<Button>("Tile Button" + i);
 
-        tileButton.OnClick += ChangePreviewTile;
+            tileButton.OnClick += ChangePreviewTile;
+        }
+
+        playButton = gameStateManager.uiManager.GetUIElement<Button>("Play Button");
+        
         playButton.OnClick += PlayButton;
     }
 
-    private void ChangePreviewTile()
+    private void ChangePreviewTile(Button s)
     {
-        previewTile.ChangePreviewTile("tiles/testTile");
+        previewTile.ChangePreviewTile((s.children.First() as UIImage).sprite.path);
 
         Panel tilePanel = gameStateManager.uiManager.GetUIElement<Panel>("Tile Panel");
 
-        tilePanel.visible = !tilePanel.visible;
+        tilePanel.visible = true;
 
-        debugUI.SetTilePlacer(!debugUI.IsTilePlacer());
+        debugUI.SetTilePlacer(true);
     }
 
-    private void PlayButton()
+    private void PlayButton(Button s)
     {
         UIImage playButtonImage = playButton.GetChild<UIImage>("Play Button Image");
 
@@ -104,12 +111,26 @@ public class Debug : World
             return;
         }
 
+        UIText fpsText = gameStateManager.uiManager.GetUIElement<Panel>("Top Panel").GetChild<UIText>("FPS Text");
+
+        elapsedTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+        if (elapsedTime >= 1.0f)
+        {
+            fps = frameCount;
+            frameCount = 0;
+            elapsedTime = 0;
+        }
+
+        fpsText.text = "FPS: " + fps;
+
         base.Update(gameTime);
  
     }
 
     public override void Draw(SpriteBatch levelSpriteBatch)
     {
+        frameCount++;
         previewTileGrid.Draw(levelSpriteBatch);
         previewTile.Draw(levelSpriteBatch);
         base.Draw(levelSpriteBatch);

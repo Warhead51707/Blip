@@ -1,0 +1,10 @@
+{
+  "identifier": "world",
+  "grids": [
+    {
+      "identifier": "placement",
+      "layer": 1,
+      "tiles":  []
+    }
+  ]
+}

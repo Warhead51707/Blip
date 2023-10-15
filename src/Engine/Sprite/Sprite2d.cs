@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 namespace Blip.src.Engine.Sprite;
 public class Sprite2d
 {
+    public string path;
     public Vector2 position;
     public Vector2 scale = new Vector2(1f, 1f);
     public float rotation = 0f;
@@ -23,6 +24,8 @@ public class Sprite2d
 
     public Sprite2d(ContentManager contentManager, GraphicsDevice graphicsDevice, string spritePath, Vector2 position)
     {
+        path = spritePath;
+
         this.contentManager = contentManager;
         this.graphicsDevice = graphicsDevice;
 

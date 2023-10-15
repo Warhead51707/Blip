@@ -102,3 +102,6 @@ C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui
 C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\stop_button.png
 C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\play_button.png
 C:\Users\nicki\OneDrive\Documents\All Projects\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\ui\stop_button.png
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\character\player\char1.png
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\sprites\tiles\testTile2.png
+C:\Users\nicki\Documents\Blip\bin\Debug\net6.0-windows\Content\assets\scenes\world.json

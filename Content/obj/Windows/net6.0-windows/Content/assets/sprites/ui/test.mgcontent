@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/assets/sprites/ui/test.png</SourceFile>
-  <SourceTime>2023-10-13T21:41:14.2666524-04:00</SourceTime>
-  <DestFile>C:/Users/nicki/OneDrive/Documents/All Projects/Blip/Content/bin/Windows/Content/assets/sprites/ui/test.xnb</DestFile>
-  <DestTime>2023-10-13T22:10:20.1278058-04:00</DestTime>
+  <SourceFile>C:/Users/nicki/Documents/Blip/Content/assets/sprites/ui/test.png</SourceFile>
+  <SourceTime>2023-09-21T21:52:48-04:00</SourceTime>
+  <DestFile>C:/Users/nicki/Documents/Blip/Content/bin/Windows/Content/assets/sprites/ui/test.xnb</DestFile>
+  <DestTime>2023-10-14T16:08:14.9075011-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

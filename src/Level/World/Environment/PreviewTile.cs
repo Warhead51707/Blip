@@ -1,14 +1,18 @@
 ﻿using Blip.src.Engine.Level;
 using Blip.src.Engine.Sprite;
 using Blip.src.Level.Scenes;
+using Blip.src.Level.Scenes.DataDriven;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Blip.src.Level.World.Environment;
@@ -66,14 +70,29 @@ public class PreviewTile : Tile
 
         previewTileGrid.SetTileWithWorld(this, position);
 
-        if (currentMouseState.LeftButton == ButtonState.Pressed && previousMouseState.LeftButton == ButtonState.Released)
+        string filePath = Path.Combine("..", "..", "..", "Content", "assets", "scenes", "world.json");
+
+        DataDrivenScene dataDrivenScene = JsonSerializer.Deserialize<DataDrivenScene>(File.ReadAllText(filePath));
+
+        if (currentMouseState.LeftButton == ButtonState.Pressed)
         {
             placementTileGrid.SetTileWithWorld(new Tile(scene, Vector2.Zero, identifier), position);
+
+            dataDrivenScene.Grids[0].Tiles.Add(new DataDrivenScene.Tile((int)position.X / 16, (int)position.Y / 16, identifier));
+
+            string jsonString = JsonSerializer.Serialize(dataDrivenScene);
+
+            File.WriteAllText(filePath, jsonString);
         }
 
-        if (currentMouseState.RightButton == ButtonState.Pressed && previousMouseState.RightButton == ButtonState.Released)
+        if (currentMouseState.RightButton == ButtonState.Pressed)
         {
             placementTileGrid.RemoveTileWithWorld(position);
+            dataDrivenScene.Grids[0].Tiles.RemoveAll(tile => tile.X == position.X / 16 && tile.Y == position.Y / 16);
+
+            string jsonString = JsonSerializer.Serialize(dataDrivenScene);
+
+            File.WriteAllText(filePath, jsonString);
         }
 
     }

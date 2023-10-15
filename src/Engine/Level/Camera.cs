@@ -6,7 +6,7 @@ using SharpDX.Direct2D1.Effects;
 namespace Blip.src.Engine.Level;
 public class Camera
 {
-    public Matrix transformMatrix = Matrix.CreateScale(3f);
+    public Matrix transformMatrix = Matrix.CreateScale(5f);
     public Matrix uiTransformMatrix = Matrix.CreateScale(3f);
 
     private readonly int screenWidth;
@@ -51,11 +51,10 @@ public class Camera
 
     public void Attach(Vector2 target)
     {
-        Matrix position = Matrix.CreateTranslation(-target.X, -target.Y, 0) * Matrix.CreateScale(3f);
+        Matrix position = Matrix.CreateTranslation(-target.X, -target.Y, 0) * Matrix.CreateScale(5f);
         Matrix offset = Matrix.CreateTranslation(screenWidth / 2, screenHeight / 2, 0);
 
         transformMatrix = position * offset;
-        //uiTransformMatrix = (position * Matrix.CreateScale(3f)) * offset; 
     }
 
     public void SetFocus(bool isFocused)
