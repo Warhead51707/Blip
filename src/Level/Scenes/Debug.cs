@@ -107,8 +107,6 @@ public class Debug : World
             Vector2 gridMousePosition = Vector2.Floor(new Vector2(worldMousePosition.X / 16, worldMousePosition.Y / 16));
 
             gridPosText.text = "(" + gridMousePosition.X + "," + gridMousePosition.Y + ")";
-
-            return;
         }
 
         UIText fpsText = gameStateManager.uiManager.GetUIElement<Panel>("Top Panel").GetChild<UIText>("FPS Text");
@@ -124,7 +122,7 @@ public class Debug : World
 
         fpsText.text = "FPS: " + fps;
 
-        base.Update(gameTime);
+        if (!isActive) base.Update(gameTime);
  
     }
 

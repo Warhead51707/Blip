@@ -15,9 +15,9 @@ public class TileGrid
 
     private float layer = 1f;
 
-    private Scene scene;
+    private Scenes.World scene;
 
-    public TileGrid(Scene scene, float layer)
+    public TileGrid(Scenes.World scene, float layer)
     {
         this.scene = scene;
         this.layer = layer;
@@ -81,9 +81,35 @@ public class TileGrid
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        foreach (KeyValuePair<Vector2,Tile> tile in tiles)
+        
+        float cameraWidth = scene.gameStateManager.graphicsDevice.Viewport.Width / scene.camera.transformMatrix.M11;
+        float cameraHeight = scene.gameStateManager.graphicsDevice.Viewport.Height / scene.camera.transformMatrix.M22;
+
+        Vector2 cameraPosition = new Vector2((-scene.camera.transformMatrix.Translation.X / 2), (-scene.camera.transformMatrix.Translation.Y / 2));
+
+        Vector2 cameraGridPosition = WorldPosToGridPos(cameraPosition);
+        
+        int numTilesX = (int)cameraWidth / 16;
+        int numTilesY = (int)cameraHeight / 16;
+
+
+        int startX = (int)Math.Ceiling(cameraGridPosition.X);
+        int startY = (int)Math.Ceiling(cameraGridPosition.Y);
+
+        System.Diagnostics.Debug.WriteLine(startX + ", " + startY);
+
+        for (int y = 0; y < numTilesY; y++)
         {
-            tile.Value.Draw(spriteBatch, layer);
+            for (int x = 0; x < numTilesX; x++)
+            {
+                int tileX = startX + x;
+                int tileY = startY + y;
+
+                if (tiles.ContainsKey(new Vector2(tileX, tileY)))
+                {
+                    tiles[new Vector2(tileX, tileY)].Draw(spriteBatch, layer);
+                }
+            }
         }
     }
 
