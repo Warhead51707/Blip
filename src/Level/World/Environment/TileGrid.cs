@@ -73,30 +73,29 @@ public class TileGrid
 
     public void Update()
     {
-        foreach (KeyValuePair<Vector2, Tile> tile in tiles)
-        {
-            tile.Value.Update();
-        }
+        TileUpdates();
     }
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        
+        TileUpdates(spriteBatch);
+    }
+
+    public void TileUpdates(SpriteBatch spriteBatch = null)
+    {
         float cameraWidth = scene.gameStateManager.graphicsDevice.Viewport.Width / scene.camera.transformMatrix.M11;
         float cameraHeight = scene.gameStateManager.graphicsDevice.Viewport.Height / scene.camera.transformMatrix.M22;
 
-        Vector2 cameraPosition = new Vector2((-scene.camera.transformMatrix.Translation.X / 2), (-scene.camera.transformMatrix.Translation.Y / 2));
+        Vector2 cameraPosition = new Vector2(-scene.camera.transformMatrix.Translation.X, -scene.camera.transformMatrix.Translation.Y);
 
         Vector2 cameraGridPosition = WorldPosToGridPos(cameraPosition);
-        
-        int numTilesX = (int)cameraWidth / 16;
-        int numTilesY = (int)cameraHeight / 16;
+
+        int numTilesX = (int)Math.Round(cameraWidth / 16) + 2;
+        int numTilesY = (int)Math.Round(cameraHeight / 16) + 2;
 
 
-        int startX = (int)Math.Ceiling(cameraGridPosition.X);
-        int startY = (int)Math.Ceiling(cameraGridPosition.Y);
-
-        System.Diagnostics.Debug.WriteLine(startX + ", " + startY);
+        int startX = (int)Math.Ceiling(cameraGridPosition.X / scene.camera.transformMatrix.M11) - 1;
+        int startY = (int)Math.Ceiling(cameraGridPosition.Y / scene.camera.transformMatrix.M22) - 1;
 
         for (int y = 0; y < numTilesY; y++)
         {
@@ -107,7 +106,13 @@ public class TileGrid
 
                 if (tiles.ContainsKey(new Vector2(tileX, tileY)))
                 {
-                    tiles[new Vector2(tileX, tileY)].Draw(spriteBatch, layer);
+                    if (spriteBatch != null)
+                    {
+                        tiles[new Vector2(tileX, tileY)].Draw(spriteBatch, layer);
+                        continue;
+                    }
+
+                    tiles[new Vector2(tileX, tileY)].Update();
                 }
             }
         }

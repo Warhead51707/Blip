@@ -24,11 +24,17 @@ public class PreviewTile : Tile
 
     private MouseState currentMouseState;
 
+    private string filePath;
+    private DataDrivenScene dataDrivenScene;
+
     public PreviewTile(Scene scene, Vector2 position, string identifier, TileGrid placementTileGrid, TileGrid previewTileGrid) : base(scene, position, identifier)
     {
         this.placementTileGrid = placementTileGrid;
         this.previewTileGrid = previewTileGrid;
         this.scene = scene;
+
+        filePath = Path.Combine("..", "..", "..", "Content", "assets", "scenes", "world.json");
+        dataDrivenScene = JsonSerializer.Deserialize<DataDrivenScene>(File.ReadAllText(filePath));
     }
 
     public void ChangePreviewTile(string identifier)
@@ -69,10 +75,6 @@ public class PreviewTile : Tile
         }
 
         previewTileGrid.SetTileWithWorld(this, position);
-
-        string filePath = Path.Combine("..", "..", "..", "Content", "assets", "scenes", "world.json");
-
-        DataDrivenScene dataDrivenScene = JsonSerializer.Deserialize<DataDrivenScene>(File.ReadAllText(filePath));
 
         if (currentMouseState.LeftButton == ButtonState.Pressed)
         {
