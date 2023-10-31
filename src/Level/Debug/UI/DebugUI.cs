@@ -20,12 +20,14 @@ public class DebugUI
     public DebugUI(UIManager uiManager)
     {
         testPanel = new Panel("Test Panel", uiManager, AnchorPoint.BottomLeft, new Vector2(0, 0), new Vector2(148, (uiManager.graphicsAdapter.CurrentDisplayMode.Height / 3) - 20), "ui/test");
-        topPanel = new Panel("Top Panel", uiManager, AnchorPoint.TopRight, new Vector2(0, 0), new Vector2(uiManager.graphicsAdapter.CurrentDisplayMode.Width / 3, 20), "ui/test3");
+        topPanel = new Panel("Top Panel", uiManager, AnchorPoint.TopRight, new Vector2(-5, 0), new Vector2((uiManager.graphicsAdapter.CurrentDisplayMode.Width / 3) + 10, 15), "ui/test3");
         tilePanel = new Panel("Tile Panel", uiManager, AnchorPoint.Mouse, new Vector2(-25, 65), new Vector2(40, 20), "ui/test");
 
-        topPanel.AddChild(new UIText("W Engine Text", uiManager, AnchorPoint.None, new Vector2(74, 10), "W ENGINE: 0.0.1", Color.Yellow));
+        topPanel.AddChild(new UIText("File Text", uiManager, AnchorPoint.None, new Vector2(20, 7), "File", Color.Yellow));
+        topPanel.AddChild(new UIText("Edit Text", uiManager, AnchorPoint.None, new Vector2(46, 7), "Edit", Color.Yellow));
+        topPanel.AddChild(new UIText("Editor Text", uiManager, AnchorPoint.None, new Vector2(76, 7), "Editor", Color.Yellow));
 
-        topPanel.AddChild(new UIText("FPS Text", uiManager, AnchorPoint.None, new Vector2((uiManager.graphicsAdapter.CurrentDisplayMode.Width / 3) - 45, 10), "FPS: ", Color.Pink));
+        topPanel.AddChild(new UIText("FPS Text", uiManager, AnchorPoint.None, new Vector2((uiManager.graphicsAdapter.CurrentDisplayMode.Width / 3) - 45, 7), "FPS: ", Color.Pink));
 
         playButton = new Button("Play Button", uiManager, AnchorPoint.BottomRight, new Vector2(16, 16), new Vector2(32, 32), "ui/test2", 2f);
 
@@ -55,6 +57,8 @@ public class DebugUI
         tilePanel.setChild(true);
 
         tilePanel.visible = false;
+
+        testPanel.visible = false;
 
         uiManager.AddUIElement(testPanel);
         uiManager.AddUIElement(topPanel);

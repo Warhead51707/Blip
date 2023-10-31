@@ -7525,23 +7525,22 @@
   },
   "packageFolders": {
     "C:\\Users\\nicki\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicki\\OneDrive\\Documents\\All Projects\\Blip\\Blip.csproj",
+      "projectUniqueName": "C:\\Users\\nicki\\Documents\\Blip\\Blip.csproj",
       "projectName": "Blip",
-      "projectPath": "C:\\Users\\nicki\\OneDrive\\Documents\\All Projects\\Blip\\Blip.csproj",
+      "projectPath": "C:\\Users\\nicki\\Documents\\Blip\\Blip.csproj",
       "packagesPath": "C:\\Users\\nicki\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicki\\OneDrive\\Documents\\All Projects\\Blip\\obj\\",
+      "outputPath": "C:\\Users\\nicki\\Documents\\Blip\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\nicki\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7549,7 +7548,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://packages.stride3d.net/nuget": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -7595,7 +7595,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
